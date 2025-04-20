@@ -5,8 +5,6 @@ import { RouterOutlet } from '@angular/router';
   selector: 'soms-page-root',
   imports: [RouterOutlet],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
     <router-outlet />
   `,
   styles: [],

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'soms-page-projects',
+  selector: 'soms-projects',
   imports: [],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',

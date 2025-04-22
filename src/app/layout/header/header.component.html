@@ -39,9 +39,10 @@
       <div class="-mr-2 flex md:hidden">
         <button
           type="button"
-          class="relative inline-flex items-center justify-center rounded-md bg-Sky-800 p-2 text-sky-600 hover:bg-Sky-700 hover:text-sky-600 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-Sky-800 focus:outline-hidden"
+          class="relative inline-flex items-center justify-center rounded-md bg-Sky-800 p-2 text-sky-600 hover:bg-Sky-700 hover:text-sky-600 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-Sky-800 focus:outline-hidden cursor-pointer"
           aria-controls="mobile-menu"
           aria-expanded="false"
+          (click)="toggleMobileMenu()"
         >
           <span class="absolute -inset-0.5"></span>
           <span class="sr-only">Open main menu</span>
@@ -79,7 +80,14 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="md:hidden" id="mobile-menu">
+  <div
+    class="md:hidden mobile-menu"
+    id="mobile-menu"
+    [class.hidden]="!isMobileMenuVisible"
+    [class.block]="isMobileMenuVisible"
+    [class.close]="!isMobileMenuVisible"
+    [class.open]="isMobileMenuVisible"
+  >
     <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
       <!-- Current: "bg-Sky-900 text-sky-600", Default: "text-Sky-300 hover:bg-Sky-700 hover:text-sky-600" -->
       <a

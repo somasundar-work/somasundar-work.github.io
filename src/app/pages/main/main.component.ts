@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { AboutComponent } from './about/about.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'soms-main',
-  imports: [AboutComponent],
+  imports: [ContactComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
